@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+    <pattern>*</pattern>
+    <template>I can talk only about football.</template>
+  </category>
+  
+    <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>
+         Hello <set name = "username"> <star/>! </set>
+      </template>  
+   </category>  
+  
+   <category>
+      <pattern>* MY NAME IS *</pattern>
+      <template>
+         Hello <set name = "username"> <star index="2"/>! </set>
+      </template>  
+   </category>  
+  
+     <category>
+      <pattern>* I AM *</pattern>
+      <template>
+        <srai><star/> MY NAME IS <star index="2"/></srai>
+      </template>  
+   </category>  
+  
+   <category>
+      <pattern>I AM *</pattern>
+      <template>
+        <srai>MY NAME IS <star/></srai>
+      </template>  
+   </category>  
+  
+  <category>
+      <pattern>HI</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Welcome</li>
+              <li>Hi</li>
+          </random>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>HI *</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Welcome</li>
+              <li>Hi</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>HELLO</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Welcome</li>
+              <li>Hi</li>
+          </random>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>HELLO *</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Welcome</li>
+              <li>Hi</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>WELCOME</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Welcome</li>
+              <li>Hi</li>
+          </random>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>WELCOME *</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Welcome</li>
+              <li>Hi</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+        <pattern>ARE YOU FOOTBALL FAN</pattern>
+        <template>
+            Yes, I love football.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ARE YOU * FOOTBALL FAN</pattern>
+        <template>
+            I'm big football fan.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DO YOU PLAY FOOTBALL</pattern>
+        <template>
+            Sometimes. But i'm only a bot.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DO YOU LIKE FOOTBALL</pattern>
+        <template>
+            Yes, I love football.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* FAVORITE PLAYER</pattern>
+        <template>
+            My favorite football player is Lionel Messi.
+        </template>
+    </category>
+    
+     <category>
+        <pattern>* FAVORITE * PLAYER</pattern>
+        <template>
+            My favorite football player is lionel messi.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* FAVORITE TEAM</pattern>
+        <template>
+            My favorite football team is Valencia FC.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* FAVORITE * TEAM</pattern>
+        <template>
+            My favorite football team is Valencia FC.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DO YOU LIKE *</pattern>
+        <template>
+            Yes, i like everything in world of football.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I LIKE *</pattern>
+        <template>
+            <star/> is very good.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MY FAVORITE TEAM IS *</pattern>
+        <template>
+            <star/> is a pretty solid team. <set name = "team"></set>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>MY FAVORITE * IS *</pattern>
+        <template>
+            Oh yes, <star index="2"/> is quite good.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT DO YOU THINK ABOUT *</pattern>
+        <template>
+            <star/> is pretty solid.
+        </template>
+    </category>
+    
+    <category>
+        <pattern></pattern>
+        <template>
+            
+        </template>
+    </category>
+   
+   <category>
+    <pattern>* WIN *</pattern>
+    <template>
+        <condition>
+            <li name="team" value="unknown">I dont know, football is unexpected sport. But if Valencia participated in this tournament, they would win it.</li>
+            <li name="team" value="">I dont know, football is unexpected sport. But if Valencia participated in this tournament, they would win it.</li>
+            <li>I dont know, football is unexpected sport. But if <get name="team"/> participated in this tournament, they would win it!</li>
+        </condition>
+    </template>
+    </category>
+    
+    <category>
+      <pattern>BYE</pattern>
+      <template>
+          <random>
+              <li>Bye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Goodbye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Farewell <get name = "username"/>, Thanks for the conversation!</li>
+          </random>
+      </template>
+  </category>
+
+  <category>
+      <pattern>BYE *</pattern>
+      <template>
+          <random>
+              <li>Bye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Goodbye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Farewell <get name = "username"/>, Thanks for the conversation!</li>
+          </random>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>GOOBYE</pattern>
+      <template>
+          <random>
+              <li>Bye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Goodbye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Farewell <get name = "username"/>, Thanks for the conversation!</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>GOOBYE *</pattern>
+      <template>
+          <random>
+              <li>Bye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Goodbye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Farewell <get name = "username"/>, Thanks for the conversation!</li>
+          </random>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>FAREWELL</pattern>
+      <template>
+          <random>
+              <li>Bye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Goodbye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Farewell <get name = "username"/>, Thanks for the conversation!</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>FAREWELL *</pattern>
+      <template>
+          <random>
+              <li>Bye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Goodbye <get name = "username"/>, Thanks for the conversation!</li>
+              <li>Farewell <get name = "username"/>, Thanks for the conversation!</li>
+          </random>
+      </template>
+  </category>
+  
+</aiml>
